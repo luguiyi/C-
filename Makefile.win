@@ -1,0 +1,82 @@
+# Project: c语言版魔塔
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = peo.o 地图1赋值函数.o 地图输出函数.o 地图移动函数.o 第2块地图.o 第3块地图.o 加血函数.o 上一个地图的函数.o 下一个地图的函数.o "1\ 与怪的战斗函数.o" 主函数.o 加攻击力函数.o 人物属性赋值.o 人物属性输出.o 颜色函数.o "2\ 与BOSS的战斗函数.o" "3\ 与虎战斗的函数.o" "4\ 与象的战斗函数.o" 作弊码.o
+LINKOBJ  = peo.o 地图1赋值函数.o 地图输出函数.o 地图移动函数.o 第2块地图.o 第3块地图.o 加血函数.o 上一个地图的函数.o 下一个地图的函数.o "1 与怪的战斗函数.o" 主函数.o 加攻击力函数.o 人物属性赋值.o 人物属性输出.o 颜色函数.o "2 与BOSS的战斗函数.o" "3 与虎战斗的函数.o" "4 与象的战斗函数.o" 作弊码.o
+LIBS     = -L"D:/Dev-Cpp/MinGW64/lib" -L"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Dev-Cpp/MinGW64/include" -I"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Dev-Cpp/MinGW64/include" -I"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = c语言版魔塔.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+peo.o: peo.c
+	$(CC) -c peo.c -o peo.o $(CFLAGS)
+
+地图1赋值函数.o: 地图1赋值函数.c
+	$(CC) -c 地图1赋值函数.c -o 地图1赋值函数.o $(CFLAGS)
+
+地图输出函数.o: 地图输出函数.c
+	$(CC) -c 地图输出函数.c -o 地图输出函数.o $(CFLAGS)
+
+地图移动函数.o: 地图移动函数.c
+	$(CC) -c 地图移动函数.c -o 地图移动函数.o $(CFLAGS)
+
+第2块地图.o: 第2块地图.c
+	$(CC) -c 第2块地图.c -o 第2块地图.o $(CFLAGS)
+
+第3块地图.o: 第3块地图.c
+	$(CC) -c 第3块地图.c -o 第3块地图.o $(CFLAGS)
+
+加血函数.o: 加血函数.c
+	$(CC) -c 加血函数.c -o 加血函数.o $(CFLAGS)
+
+上一个地图的函数.o: 上一个地图的函数.c
+	$(CC) -c 上一个地图的函数.c -o 上一个地图的函数.o $(CFLAGS)
+
+下一个地图的函数.o: 下一个地图的函数.c
+	$(CC) -c 下一个地图的函数.c -o 下一个地图的函数.o $(CFLAGS)
+
+"1\ 与怪的战斗函数.o": 1\ 与怪的战斗函数.c
+	$(CC) -c "1 与怪的战斗函数.c" -o "1 与怪的战斗函数.o" $(CFLAGS)
+
+主函数.o: 主函数.c
+	$(CC) -c 主函数.c -o 主函数.o $(CFLAGS)
+
+加攻击力函数.o: 加攻击力函数.c
+	$(CC) -c 加攻击力函数.c -o 加攻击力函数.o $(CFLAGS)
+
+人物属性赋值.o: 人物属性赋值.c
+	$(CC) -c 人物属性赋值.c -o 人物属性赋值.o $(CFLAGS)
+
+人物属性输出.o: 人物属性输出.c
+	$(CC) -c 人物属性输出.c -o 人物属性输出.o $(CFLAGS)
+
+颜色函数.o: 颜色函数.c
+	$(CC) -c 颜色函数.c -o 颜色函数.o $(CFLAGS)
+
+"2\ 与BOSS的战斗函数.o": 2\ 与BOSS的战斗函数.c
+	$(CC) -c "2 与BOSS的战斗函数.c" -o "2 与BOSS的战斗函数.o" $(CFLAGS)
+
+"3\ 与虎战斗的函数.o": 3\ 与虎战斗的函数.c
+	$(CC) -c "3 与虎战斗的函数.c" -o "3 与虎战斗的函数.o" $(CFLAGS)
+
+"4\ 与象的战斗函数.o": 4\ 与象的战斗函数.c
+	$(CC) -c "4 与象的战斗函数.c" -o "4 与象的战斗函数.o" $(CFLAGS)
+
+作弊码.o: 作弊码.c
+	$(CC) -c 作弊码.c -o 作弊码.o $(CFLAGS)
